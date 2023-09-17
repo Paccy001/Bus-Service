@@ -1,0 +1,111 @@
+body {
+    background-color: rgb(100, 26, 26);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  a {
+    color: #ffc107;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ffc600;
+  }
+  
+  /* Top navigation bar */
+  .top-nav {
+    background-color: #08004f;
+    text-align: center;
+    height: 50px;
+    color: #ffc107;
+  }
+  
+  .top-nav td {
+    padding: 10px;
+  }
+  
+  /* Banner section */
+  .banner {
+    text-align: center;
+  }
+  
+  /* First content section */
+  .welcome-msg {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+  }
+  
+  /* Services section */
+  .services-heading {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .service {
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Second content section */
+  .highlight-msg {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+  }
+  
+  .book-tickets,
+  .comfortable-travel {
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .comfortable-travel {
+    background-color: #14b976;
+  }
+  
+  /* Book Ticket form section */
+  .book-ticket-section {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .book-ticket-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .book-ticket-form input {
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  .book-ticket-form button {
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #ffc107;
+    color: #08004f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .book-ticket-form button:hover {
+    background-color: #ffc600;
+  }
