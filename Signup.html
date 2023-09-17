@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bus Service - Sign Up</title>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <!-- Top navigation bar -->
+    <!-- Top navigation bar content here... -->
+    <tr style="background-color: #08004f;text-align:center;height:50px;color:#ffc107">
+        <td><a href="Index.html" class="active" id="nav-link" style="text-decoration: none;color:#ffc107">| ABOUT |</a></td>
+        <td><a href="Home page.html" class="active" id="nav-link" style="text-decoration: none;color:#ffc107;">| HOME |</a></td>
+        <td><a href="login.html" class="active" id="nav-link" style="text-decoration: none;color:#ffc107">| LOGIN |</a></td>
+        <td><a href="Contact.html" class="active" id="nav-link" style="text-decoration: none;color:#ffc107">| CONTACT US |</a></td>
+    </tr>
+
+   <!-- Sign Up form section -->
+   <tr>
+    <td colspan="4" class="signup-section">
+      <h2>Sign Up</h2>
+      <form class="signup-form" action="Signup.php" method="post" enctype="multipart/form-data">
+        <label for="role" style="color: #08004f;" >Sign Up As:</label>
+        <select name="role" id="role" required>
+          <option value="passenger">Passenger</option>
+          <option value="owner">Owner</option>
+        </select><!-- Note the enctype attribute for file upload -->
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="PHONE NUMBER" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+      
+        <!-- File input for business document -->
+        <div id="owner-fields" style="display: none;">
+          <label for="business_document" style="color: #08004f;">Document allow you to run bussines:</label>
+          <input type="file" name="business_document" accept=".pdf, .doc, .docx"></br>
+          <label for="Personal_ID" style="color: #08004f;">Personal_ID:</label>
+          <input type="file" name="personal_id" accept=".pdf, .doc, .docx" style="height: 115px;">
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </td>
+  </tr>
+
+    <!-- Footer section -->
+    <!-- Footer content here... -->
+    <tr style="font-size: 20px;padding:10px">
+        <td></td>
+        <td style=" text-align: right;padding-top:10px; ">
+          <p >
+            <a href="#" style="text-decoration: none;color: rgb(255, 255, 255);">Terms of Services </a>
+          </p>
+        </td>
+        <td style=" text-align:left;padding-top:10px">
+          <p>
+            <a href="#" style="text-decoration: none;color: rgb(255, 255, 255);"> & Privacy Policy</a>
+          </p>
+        </td>
+        <td></td>
+    </tr>
+    <tr style="font-size: 20px;">
+        <td colspan="4" style=" text-align: left;padding-top:20px">
+          <a href="home.html" style="text-decoration: none;color: rgb(255, 255, 255);">
+            Copyright ©  Bus Service 2023.
+          </a>
+        </td>
+    </tr>
+  </table>
+  <script>
+    document.getElementById("role").addEventListener("change", function() {
+      var ownerFields = document.getElementById("owner-fields");
+      if (this.value === "owner") {
+        ownerFields.style.display = "block";
+      } else {
+        ownerFields.style.display = "none";
+      }
+    });
+
+    // Password match check
+    document.getElementById("confirm_password").addEventListener("input", function() {
+      const password = document.getElementById("password").value;
+      const confirm_password = this.value;
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = this;
+
+      if (password === confirm_password) {
+        passwordInput.style.backgroundColor = "white"; // Reset to default color
+        confirmPasswordInput.style.backgroundColor = "white"; // Reset to default color
+      } else {
+        passwordInput.style.backgroundColor = "red"; // Set background color to red
+        confirmPasswordInput.style.backgroundColor = "red"; // Set background color to red
+      }
+    });
+  </script>
+</body>
+</html>
